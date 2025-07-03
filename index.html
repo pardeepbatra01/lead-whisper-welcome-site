@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VoiceAI Pro - 24/7 AI Virtual Receptionist for Canadian businesses. Never miss calls, book appointments automatically, PIPEDA compliant. Free 14-day trial.">
+    <meta name="keywords" content="AI receptionist, virtual receptionist Canada, automated phone system, appointment booking, Canadian business phone service">
+    <meta property="og:title" content="VoiceAI Pro - 24/7 AI Virtual Receptionist for Canadian Businesses">
+    <meta property="og:description" content="Transform your Canadian business with advanced AI receptionist. Handle calls 24/7, book appointments, deliver perfect customer service.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://voiceaipro.ca/og-image.jpg">
+    <title>VoiceAI Pro - 24/7 AI Virtual Receptionist for Canadian Businesses</title>
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "VoiceAI Pro",
+        "description": "24/7 AI Virtual Receptionist for Canadian Businesses",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "CAD",
+            "description": "14-day free trial"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "847"
+        }
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 50%, #16213e 100%);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(20px);
+            background: rgba(16, 16, 29, 0.8);
+            border-bottom: 1px solid rgba(147, 51, 234, 0.2);
+            animation: slideDown 0.8s ease-out;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #9333ea, #c084fc, #e879f9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(147, 51, 234, 0.5);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #9333ea, #c084fc);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #c084fc;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .header-contact {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: #c084fc;
+            font-weight: 600;
+        }
+
+        .cta-nav {
+            background: linear-gradient(135deg, #9333ea, #7c3aed);
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(147, 51, 234, 0.4);
+        }
+
+        .cta-nav:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(147, 51, 234, 0.6);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            z-index: 2;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff, #c084fc, #9333ea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-text p {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #9333ea, #7c3aed);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(147, 51, 234, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(147, 51, 234, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #9333ea;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            color: #c084fc;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: #9333ea;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .hero-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .phone-mockup {
+            width: 300px;
+            height: 600px;
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.1), rgba(124, 58, 237, 0.1));
+            border-radius: 40px;
+            border: 3px solid rgba(147, 51, 234, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: float 6s ease-in-out infinite;
+            backdrop-filter: blur(20px);
+        }
+
+        .phone-screen {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            border-radius: 30px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ai-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #9333ea, #c084fc);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .call-status {
+            background: rgba(147, 51, 234, 0.2);
+            padding: 10px 20px;
+            border-radius: 25px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(147, 51, 234, 0.3);
+        }
+
+        .live-stats {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(16, 16, 29, 0.9);
+            padding: 15px;
+            border-radius: 15px;
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            backdrop-filter: blur(20px);
+        }
+
+        .live-counter {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #9333ea;
+            text-align: center;
+        }
+
+        .live-label {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
+            text-align: center;
+        }
+
+        /* Floating Elements */
+        .floating-element {
+            position: absolute;
+            opacity: 0.1;
+            animation: floatRandom 10s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(1) {
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-element:nth-child(2) {
+            top: 60%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .floating-element:nth-child(3) {
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        /* Trust Section */
+        .trust-section {
+            padding: 4rem 0;
+            background: rgba(16, 16, 29, 0.3);
+            text-align: center;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .trust-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        .trust-badge:hover {
+            opacity: 1;
+        }
+
+        .trust-badge img {
+            width: 60px;
+            height: 60px;
+            filter: grayscale(1) brightness(0.8);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 8rem 0;
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.05), rgba(16, 16, 29, 0.5));
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .feature-card {
+            background: rgba(16, 16, 29, 0.6);
+            border: 1px solid rgba(147, 51, 234, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem;
+            backdrop-filter: blur(20px);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #9333ea, #c084fc);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(147, 51, 234, 0.5);
+            box-shadow: 0 20px 40px rgba(147, 51, 234, 0.2);
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #9333ea, #c084fc);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #c084fc;
+        }
+
+        .feature-card p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 8rem 0;
+            background: linear-gradient(135deg, rgba(16, 16, 29, 0.8), rgba(147, 51, 234, 0.05));
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .pricing-card {
+            background: rgba(16, 16, 29, 0.6);
+            border: 2px solid rgba(147, 51, 234, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card.featured {
+            border-color: #9333ea;
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(147, 51, 234, 0.3);
+        }
+
+        .pricing-card.featured::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #9333ea, #c084fc);
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            border-color: #9333ea;
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+
+        .plan-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #c084fc;
+            margin-bottom: 1rem;
+        }
+
+        .plan-price {
+            font-size: 3rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #9333ea, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .plan-period {
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 2rem;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .plan-features li {
+            padding: 0.5rem 0;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .plan-features li::before {
+            content: '✓';
+            color: #9333ea;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 8rem 0;
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.1), rgba(16, 16, 29, 0.8));
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .testimonial-card {
+            background: rgba(16, 16, 29, 0.6);
+            border: 1px solid rgba(147, 51, 234, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem;
+            backdrop-filter: blur(20px);
+            position: relative;
+        }
+
+        .testimonial-quote {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #9333ea, #c084fc);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .author-info h4 {
+            color: #c084fc;
+            font-weight: 600;
+        }
+
+        .author-info p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        .rating {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #fbbf24;
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .stat-item {
+            opacity: 0;
+            animation: countUp 2s ease-out forwards;
+        }
+
+        .stat-number {
+            font-size: 4rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #9333ea, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 8rem 0;
+            background: rgba(16, 16, 29, 0.3);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border: 1px solid rgba(147, 51, 234, 0.2);
+            border-radius: 15px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            background: rgba(16, 16, 29, 0.6);
+            backdrop-filter: blur(20px);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: rgba(147, 51, 234, 0.1);
+        }
+
+        .faq-question h3 {
+            color: #c084fc;
+            font-weight: 600;
+        }
+
+        .faq-toggle {
+            color: #9333ea;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-answer.open {
+            padding: 1.5rem;
+            max-height: 200px;
+        }
+
+        .faq-answer p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 8rem 0;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.1), rgba(16, 16, 29, 0.8));
+        }
+
+        .cta-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cta-section h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Footer */
+        footer {
+            padding: 4rem 0 2rem;
+            background: rgba(16, 16, 29, 0.9);
+            border-top: 1px solid rgba(147, 51, 234, 0.2);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            color: #c084fc;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p, .footer-section li {
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.6;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #c084fc;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(147, 51, 234, 0.2);
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            max-width: 500px;
+            width: 90%;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #c084fc;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            border-radius: 10px;
+            background: rgba(16, 16, 29, 0.8);
+            color: white;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #9333ea;
+            box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.2);
+        }
+
+        .error-message {
+            color: #ef4444;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Animations */
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(2deg);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(147, 51, 234, 0.3);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 30px rgba(147, 51, 234, 0.5);
+            }
+        }
+
+        @keyframes floatRandom {
+            0%, 100% {
+                transform: translateY(0px) translateX(0px) rotate(0deg);
+            }
+            25% {
+                transform: translateY(-20px) translateX(10px) rotate(2deg);
+            }
+            50% {
+                transform: translateY(-10px) translateX(-5px) rotate(-1deg);
+            }
+            75% {
+                transform: translateY(-15px) translateX(5px) rotate(1deg);
+            }
+        }
+
+        @keyframes countUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .phone-mockup {
+                width: 250px;
+                height: 500px;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card.featured {
+                transform: none;
+            }
+
+            .pricing-card.featured:hover {
+                transform: translateY(-10px);
+            }
+
+            .trust-badges {
+                gap: 1.5rem;
+            }
+
+            .header-contact {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">VoiceAI Pro</div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="header-contact">
+                <span>📞 1-800-VOICE-AI</span>
+            </div>
+            <button class="cta-nav" onclick="openModal('trial-modal')">Get Started Free</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Never Miss Another Call Again</h1>
+                        <p>Transform your Canadian business with our advanced AI virtual receptionist. Handle calls 24/7, book appointments automatically, and deliver perfect customer service while you focus on growing your business.</p>
+                        <div class="hero-buttons">
+                            <button class="btn-primary" onclick="openModal('trial-modal')">Start Free Trial</button>
+                            <button class="btn-secondary" onclick="openModal('demo-modal')">Watch Demo</button>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="phone-mockup">
+                            <div class="phone-screen">
+                                <div class="ai-avatar">🤖</div>
+                                <div class="call-status">✅ Call Answered</div>
+                                <div class="call-status">📅 Appointment Booked</div>
+                                <div class="call-status">💬 Message Delivered</div>
+                            </div>
+                        </div>
+                        <div class="live-stats">
+                            <div class="live-counter" id="live-counter">2,847</div>
+                            <div class="live-label">Calls Today</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="floating-element">🔮</div>
+            <div class="floating-element">⚡</div>
+            <div class="floating-element">🌟</div>
+        </section>
+
+        <section class="trust-section">
+            <div class="container">
+                <h3 style="color: rgba(255, 255, 255, 0.6); text-align: center; margin-bottom: 1rem;">Trusted by 5,000+ Canadian Businesses</h3>
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <div style="width: 60px; height: 60px; background: rgba(147, 51, 234, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">🛡️</div>
+                        <span style="font-size: 0.9rem;">PIPEDA Compliant</span>
+                    </div>
+                    <div class="trust-badge">
+                        <div style="width: 60px; height: 60px; background: rgba(147, 51, 234, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">🔒</div>
+                        <span style="font-size: 0.9rem;">SOC 2 Certified</span>
+                    </div>
+                    <div class="trust-badge">
+                        <div style="width: 60px; height: 60px; background: rgba(147, 51, 234, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">⭐</div>
+                        <span style="font-size: 0.9rem;">4.9/5 Rating</span>
+                    </div>
+                    <div class="trust-badge">
+                        <div style="width: 60px; height: 60px; background: rgba(147, 51, 234, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">🇨🇦</div>
+                        <span style="font-size: 0.9rem;">Made in Canada</span>
+                    </div>
+                    <div class="trust-badge">
+                        <div style="width: 60px; height: 60px; background: rgba(147, 51, 234, 0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">💳</div>
+                        <span style="font-size: 0.9rem;">No Credit Card</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h2 style="font-size: 3rem; margin-bottom: 1rem; background: linear-gradient(135deg, #ffffff, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Powerful Features for Modern Businesses</h2>
+                    <p style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.8); max-width: 600px; margin: 0 auto;">Our AI receptionist works around the clock to ensure your business never misses an opportunity</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📞</div>
+                        <h3>24/7 Call Handling</h3>
+                        <p>Your AI receptionist never sleeps, never takes breaks, and handles every call with professionalism and care, ensuring your customers always reach a helpful voice.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📅</div>
+                        <h3>Smart Appointment Booking</h3>
+                        <p>Automatically schedule appointments based on your availability, send confirmations, and handle rescheduling requests without any manual intervention.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🇨🇦</div>
+                        <h3>Canadian Business Ready</h3>
+                        <p>Optimized for Canadian businesses with local accents, time zones, and business practices. Fully compliant with PIPEDA and Canadian privacy regulations.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💬</div>
+                        <h3>Intelligent Message Taking</h3>
+                        <p>Captures detailed messages, categorizes inquiries, and delivers them instantly via email, SMS, or your preferred communication channel.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Enterprise Security</h3>
+                        <p>Bank-grade encryption, secure data handling, and full compliance with Canadian privacy laws ensure your business data stays protected.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Instant Setup</h3>
+                        <p>Get your AI receptionist up and running in minutes, not hours. Simple configuration process gets you answering calls immediately.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌐</div>
+                        <h3>Multi-Language Support</h3>
+                        <p>Communicate with customers in English, French, and 48 other languages. Perfect for Canada's diverse market and international clients.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Advanced Analytics</h3>
+                        <p>Detailed call reports, customer insights, and performance metrics help you understand your business better and make data-driven decisions.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔗</div>
+                        <h3>CRM Integration</h3>
+                        <p>Seamlessly connects with popular Canadian business tools like Salesforce, HubSpot, QuickBooks, and FreshBooks for streamlined operations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing" id="pricing">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h2 style="font-size: 3rem; margin-bottom: 1rem; background: linear-gradient(135deg, #ffffff, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Simple, Transparent Pricing</h2>
+                    <p style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.8); max-width: 600px; margin: 0 auto;">Choose the plan that fits your business needs. All plans include 14-day free trial.</p>
+                </div>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <div class="plan-name">Starter</div>
+                        <div class="plan-price">$49</div>
+                        <div class="plan-period">per month CAD</div>
+                        <ul class="plan-features">
+                            <li>Up to 100 calls/month</li>
+                            <li>Basic appointment booking</li>
+                            <li>Email notifications</li>
+                            <li>Canadian phone number</li>
+                            <li>Standard support</li>
+                        </ul>
+                        <button class="btn-primary" onclick="openModal('trial-modal')" data-plan="starter">Start Free Trial</button>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="plan-name">Professional</div>
+                        <div class="plan-price">$129</div>
+                        <div class="plan-period">per month CAD</div>
+                        <ul class="plan-features">
+                            <li>Up to 500 calls/month</li>
+                            <li>Advanced appointment booking</li>
+                            <li>SMS + Email notifications</li>
+                            <li>Multiple phone numbers</li>
+                            <li>CRM integrations</li>
+                            <li>Custom greetings</li>
+                            <li>Priority support</li>
+                        </ul>
+                        <button class="btn-primary" onclick="openModal('trial-modal')" data-plan="professional">Start Free Trial</button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="plan-name">Enterprise</div>
+                        <div class="plan-price">$299</div>
+                        <div class="plan-period">per month CAD</div>
+                        <ul class="plan-features">
+                            <li>Unlimited calls</li>
+                            <li>Advanced AI features</li>
+                            <li>Multi-location support</li>
+                            <li>Custom integrations</li>
+                            <li>Advanced analytics</li>
+                            <li>Dedicated account manager</li>
+                            <li>24/7 premium support</li>
+                        </ul>
+                        <button class="btn-primary" onclick="openModal('trial-modal')" data-plan="enterprise">Start Free Trial</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials" id="testimonials">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h2 style="font-size: 3rem; margin-bottom: 1rem; background: linear-gradient(135deg, #ffffff, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">What Our Customers Say</h2>
+                    <p style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.8); max-width: 600px; margin: 0 auto;">Join thousands of satisfied Canadian businesses</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <div class="testimonial-quote">
+                            "VoiceAI Pro has completely transformed our customer service. We're a small dental practice in Toronto, and now we never miss appointments. Our booking rate increased by 40% since implementing this system."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SM</div>
+                            <div class="author-info">
+                                <h4>Dr. Sarah Mitchell</h4>
+                                <p>Mitchell Dental Clinic, Toronto</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <div class="testimonial-quote">
+                            "As a busy contractor in Calgary, I was missing too many potential jobs. VoiceAI Pro handles all my calls professionally, even at 2 AM. My revenue has increased by 60% in just 3 months."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MJ</div>
+                            <div class="author-info">
+                                <h4>Mike Johnson</h4>
+                                <p>Johnson Construction, Calgary</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <div class="testimonial-quote">
+                            "The bilingual support is fantastic for our Montreal law firm. Our AI receptionist seamlessly switches between English and French, providing excellent service to all our clients."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AL</div>
+                            <div class="author-info">
+                                <h4>Amélie Leblanc</h4>
+                                <p>Leblanc & Associates, Montreal</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <div class="testimonial-quote">
+                            "The setup was incredibly easy, and the customer support is outstanding. Our Vancouver restaurant now handles reservations 24/7, and we've seen a 25% increase in bookings."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">RC</div>
+                            <div class="author-info">
+                                <h4>Robert Chen</h4>
+                                <p>Pacific Fusion Restaurant, Vancouver</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <div class="testimonial-quote">
+                            "Our accounting firm in Halifax needed something reliable during tax season. VoiceAI Pro handled over 1,000 calls last month without missing a beat. It's like having a perfect receptionist."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">LP</div>
+                            <div class="author-info">
+                                <h4>Linda Porter</h4>
+                                <p>Atlantic Tax Services, Halifax</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <div class="testimonial-quote">
+                            "The privacy compliance was crucial for our healthcare practice. VoiceAI Pro meets all Canadian regulations, and the call quality is exceptional. Highly recommended!"
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">DK</div>
+                            <div class="author-info">
+                                <h4>Dr. David Kim</h4>
+                                <p>Wellness Medical Centre, Ottawa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="container">
+                <h2 style="font-size: 3rem; margin-bottom: 1rem; background: linear-gradient(135deg, #ffffff, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Trusted by Canadian Businesses</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">99.9%</div>
+                        <div class="stat-label">Uptime Guarantee</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">25,000+</div>
+                        <div class="stat-label">Calls Handled Daily</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Languages Supported</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2min</div>
+                        <div class="stat-label">Average Setup Time</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">5,000+</div>
+                        <div class="stat-label">Happy Customers</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">47%</div>
+                        <div class="stat-label">Avg. Revenue Increase</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq" id="faq">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h2 style="font-size: 3rem; margin-bottom: 1rem; background: linear-gradient(135deg, #ffffff, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Frequently Asked Questions</h2>
+                    <p style="font-size: 1.2rem; color: rgba(255, 255, 255, 0.8); max-width: 600px; margin: 0 auto;">Everything you need to know about VoiceAI Pro</p>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>How quickly can I set up VoiceAI Pro for my business?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>VoiceAI Pro can be set up in under 2 minutes. Simply sign up, choose your Canadian phone number, record a brief greeting, and you're ready to start receiving calls. Our team provides onboarding support if needed.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>Is VoiceAI Pro compliant with Canadian privacy laws?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, VoiceAI Pro is fully compliant with PIPEDA (Personal Information Protection and Electronic Documents Act) and all provincial privacy regulations. We use bank-grade encryption and store all data on Canadian servers.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>Can the AI handle complex customer inquiries?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our AI is trained to handle a wide range of inquiries, from simple appointment booking to detailed product questions. For complex issues it can't resolve, it intelligently transfers calls to you or takes detailed messages.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>What happens if I exceed my monthly call limit?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We'll notify you when you're approaching your limit. You can upgrade your plan anytime, or we'll offer reasonable overage rates. We never cut off your service unexpectedly.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>Does VoiceAI Pro integrate with my existing business tools?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! We integrate with popular Canadian business tools including QuickBooks, FreshBooks, Salesforce, HubSpot, Google Calendar, Microsoft 365, and many more. Custom integrations are available for Enterprise plans.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>Can I keep my existing phone number?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely! You can port your existing Canadian phone number to VoiceAI Pro, or we can provide call forwarding from your current number. The process is simple and we handle all the technical details.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>Is there a contract or can I cancel anytime?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No contracts required! You can cancel anytime with 30 days notice. We're confident you'll love VoiceAI Pro, which is why we offer a 14-day free trial with no credit card required.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Transform Your Business?</h2>
+                    <p style="font-size: 1.3rem; color: rgba(255, 255, 255, 0.8); margin-bottom: 2rem;">Join thousands of Canadian businesses who never miss a call. Try VoiceAI Pro free for 14 days - no credit card required.</p>
+                    <button class="btn-primary" style="font-size: 1.2rem; padding: 1.2rem 3rem;" onclick="openModal('trial-modal')">Start Your Free Trial</button>
+                    <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.6); margin-top: 1rem;">✓ No setup fees ✓ No contracts ✓ Cancel anytime</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>VoiceAI Pro</h3>
+                    <p>Canada's leading AI virtual receptionist service. Built by Canadians, for Canadian businesses.</p>
+                    <p style="margin-top: 1rem;">📍 Toronto, ON | Vancouver, BC | Montreal, QC</p>
+                    <p>📞 1-800-VOICE-AI (1-800-864-2324)</p>
+                    <p>✉️ hello@voiceaipro.ca</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#" onclick="openModal('demo-modal')">Demo</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#press">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#contact">Contact Support</a></li>
+                        <li><a href="#status">System Status</a></li>
+                        <li><a href="#training">Training</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#security">Security</a></li>
+                        <li><a href="#compliance">PIPEDA Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 VoiceAI Pro Inc. Built for Canadian businesses. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Trial Modal -->
+    <div id="trial-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('trial-modal')">&times;</button>
+            <h2 style="color: #c084fc; margin-bottom: 1rem;">Start Your Free 14-Day Trial</h2>
+            <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 2rem;">No credit card required. Get started in under 2 minutes.</p>
+            <form id="trial-form" onsubmit="submitTrialForm(event)">
+                <div class="form-group">
+                    <label for="business-name">Business Name *</label>
+                    <input type="text" id="business-name" name="business-name" required>
+                    <div class="error-message" id="business-name-error"></div>
+                </div>
+                <div class="form-group">
+                    <label for="contact-name">Your Name *</label>
+                    <input type="text" id="contact-name" name="contact-name" required>
+                    <div class="error-message" id="contact-name-error"></div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Business Email *</label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="error-message" id="email-error"></div>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <div class="error-message" id="phone-error"></div>
+                </div>
+                <div class="form-group">
+                    <label for="business-type">Business Type *</label>
+                    <select id="business-type" name="business-type" required>
+                        <option value="">Select your business type</option>
+                        <option value="healthcare">Healthcare/Medical</option>
+                        <option value="legal">Legal Services</option>
+                        <option value="construction">Construction/Trades</option>
+                        <option value="restaurant">Restaurant/Food Service</option>
+                        <option value="retail">Retail</option>
+                        <option value="professional">Professional Services</option>
+                        <option value="real-estate">Real Estate</option>
+                        <option value="automotive">Automotive</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <div class="error-message" id="business-type-error"></div>
+                </div>
+                <div class="form-group">
+                    <label for="province">Province/Territory *</label>
+                    <select id="province" name="province" required>
+                        <option value="">Select your province</option>
+                        <option value="AB">Alberta</option>
+                        <option value="BC">British Columbia</option>
+                        <option value="MB">Manitoba</option>
+                        <option value="NB">New Brunswick</option>
+                        <option value="NL">Newfoundland and Labrador</option>
+                        <option value="NS">Nova Scotia</option>
+                        <option value="ON">Ontario</option>
+                        <option value="PE">Prince Edward Island</option>
+                        <option value="QC">Quebec</option>
+                        <option value="SK">Saskatchewan</option>
+                        <option value="NT">Northwest Territories</option>
+                        <option value="NU">Nunavut</option>
+                        <option value="YT">Yukon</option>
+                    </select>
+                    <div class="error-message" id="province-error"></div>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem;">Start Free Trial</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Demo Modal -->
+    <div id="demo-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('demo-modal')">&times;</button>
+            <h2 style="color: #c084fc; margin-bottom: 1rem;">Watch VoiceAI Pro in Action</h2>
+            <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 2rem;">See how our AI receptionist handles real customer calls.</p>
+            <div style="background: rgba(147, 51, 234, 0.1); border-radius: 15px; padding: 3rem; text-align: center; margin-bottom: 2rem;">
+                <div style="font-size: 4rem; margin-bottom: 1rem;">🎥</div>
+                <p style="color: rgba(255, 255, 255, 0.8);">Interactive demo video would be embedded here</p>
+                <button class="btn-secondary" style="margin-top: 1rem;">Play Demo</button>
+            </div>
+            <form id="demo-form" onsubmit="submitDemoForm(event)">
+                <div class="form-group">
+                    <label for="demo-email">Email Address *</label>
+                    <input type="email" id="demo-email" name="demo-email" required>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem;">Get Demo Link</button>
+            </form>
+        </div>
+    </div>
